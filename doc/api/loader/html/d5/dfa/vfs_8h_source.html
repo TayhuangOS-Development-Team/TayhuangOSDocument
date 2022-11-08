@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>TayhuangOS GRUB2 Loader: fs/vfs.h 源文件</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">TayhuangOS GRUB2 Loader
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_97b3d2b63ac216821c2d7a22ee0ab2b0.html">fs</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">vfs.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d5/dfa/vfs_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;tayhuang/attributes.h&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;tayhuang/types.h&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="../../d2/d50/disk_8h.html">fs/disk.h</a>&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="../../d5/dfa/vfs_8h.html#a04869525957df4a1112f42464d5ef9a9">   23</a></span>&#160;<span class="keyword">typedef</span> <span class="keywordtype">void</span> <a class="code" href="../../d5/dfa/vfs_8h.html#a04869525957df4a1112f42464d5ef9a9">fs_t</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="../../d5/dfa/vfs_8h.html#a57de2d0bd1cd5133b4d042d5b91acf4b">   28</a></span>&#160;<span class="keyword">typedef</span> <span class="keywordtype">void</span> <a class="code" href="../../d5/dfa/vfs_8h.html#a57de2d0bd1cd5133b4d042d5b91acf4b">inode</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="../../d5/dfa/vfs_8h.html#ac0ef8272d0ba05d00623c20bf8928dee">   34</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>_vfs_t <a class="code" href="../../d5/dfa/vfs_8h.html#ac0ef8272d0ba05d00623c20bf8928dee">vfs_t</a>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="../../de/dde/struct__vfile__t.html">   40</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="../../de/dde/struct__vfile__t.html">_vfile_t</a> {</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="../../de/dde/struct__vfile__t.html#a977faff3aa47a79084b65b9c2892cce5">   45</a></span>&#160;    <a class="code" href="../../d5/dfa/vfs_8h.html#ac0ef8272d0ba05d00623c20bf8928dee">vfs_t</a> *<a class="code" href="../../de/dde/struct__vfile__t.html#a977faff3aa47a79084b65b9c2892cce5">fs</a>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="../../de/dde/struct__vfile__t.html#a2432d158ce2160e786dad255fb2f1b95">   50</a></span>&#160;    <a class="code" href="../../d5/dfa/vfs_8h.html#a57de2d0bd1cd5133b4d042d5b91acf4b">inode</a> *<a class="code" href="../../de/dde/struct__vfile__t.html#a2432d158ce2160e786dad255fb2f1b95">node</a>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="../../de/dde/struct__vfile__t.html#aa34fcd6179e8bcbeb3fc9c6f41e72c45">   55</a></span>&#160;    <span class="keywordtype">size_t</span> <a class="code" href="../../de/dde/struct__vfile__t.html#aa34fcd6179e8bcbeb3fc9c6f41e72c45">size</a>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="../../de/dde/struct__vfile__t.html#aaf86f817c58419e4f5e3c1e3266c0a80">   60</a></span>&#160;    wchar *<a class="code" href="../../de/dde/struct__vfile__t.html#aaf86f817c58419e4f5e3c1e3266c0a80">name</a>;</div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="../../de/dde/struct__vfile__t.html#a01ba1fd2c844a5720d769b5de98e98eb">   65</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../de/dde/struct__vfile__t.html#a01ba1fd2c844a5720d769b5de98e98eb">is_last</a>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="../../de/dde/struct__vfile__t.html#aaea067d88c025a8509a9d1840e49278f">   70</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../de/dde/struct__vfile__t.html#aaea067d88c025a8509a9d1840e49278f">is_directory</a>;</div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="../../de/dde/struct__vfile__t.html#a7926abf02c020003452340b8a7b4e66f">   75</a></span>&#160;    NULLABLE <span class="keyword">struct </span><a class="code" href="../../de/dde/struct__vfile__t.html">_vfile_t</a> *<a class="code" href="../../de/dde/struct__vfile__t.html#a7926abf02c020003452340b8a7b4e66f">nextfile</a>;</div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="../../de/dde/struct__vfile__t.html#a42a606a8feaa05c5311f3fb7ecc0bd4c">   80</a></span>&#160;    NULLABLE <span class="keyword">struct </span><a class="code" href="../../de/dde/struct__vfile__t.html">_vfile_t</a> *<a class="code" href="../../de/dde/struct__vfile__t.html#a42a606a8feaa05c5311f3fb7ecc0bd4c">childfile</a>;</div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="../../de/dde/struct__vfile__t.html#a49f5ba1314557a8ef58229ac79231c5c">   85</a></span>&#160;    NONNULL <span class="keyword">struct </span><a class="code" href="../../de/dde/struct__vfile__t.html">_vfile_t</a> *<a class="code" href="../../de/dde/struct__vfile__t.html#a49f5ba1314557a8ef58229ac79231c5c">parentfile</a>;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;} <a class="code" href="../../d5/dfa/vfs_8h.html#a1bfebb35eb9e3ee94efeb0a8eb153016">vfile_t</a>;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;PUBLIC <span class="keywordtype">void</span> <a class="code" href="../../d5/dfa/vfs_8h.html#aae52b9cdcaf5292058a134374251a2b3">read_file</a>(NONNULL <a class="code" href="../../de/dde/struct__vfile__t.html">vfile_t</a> *file, NONNULL <span class="keywordtype">void</span> *buffer);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;PUBLIC <span class="keywordtype">void</span> <a class="code" href="../../d5/dfa/vfs_8h.html#ac94fb7c906335451c6d779878706717b">write_file</a>(NONNULL <a class="code" href="../../de/dde/struct__vfile__t.html">vfile_t</a> *file, NONNULL <span class="keywordtype">void</span> *buffer, <span class="keywordtype">size_t</span> <a class="code" href="../../d2/d29/heap_8c.html#a854352f53b148adc24983a58a1866d66">size</a>);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;PUBLIC <span class="keywordtype">void</span> <a class="code" href="../../d5/dfa/vfs_8h.html#abc0b74e90bc58dfc55430a47ae6c0f64">free_vfile</a>(NONNULL <a class="code" href="../../de/dde/struct__vfile__t.html">vfile_t</a> *file);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;NULLABLE PUBLIC <a class="code" href="../../de/dde/struct__vfile__t.html">vfile_t</a> *<a class="code" href="../../d5/dfa/vfs_8h.html#ac98ce44f27f2cb3bde3cb3ce6b35e96f">get_next_file</a>(<a class="code" href="../../de/dde/struct__vfile__t.html">vfile_t</a> *file);</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;NULLABLE PUBLIC <a class="code" href="../../de/dde/struct__vfile__t.html">vfile_t</a> *<a class="code" href="../../d5/dfa/vfs_8h.html#a02af861aa03e1a6df458c1e1321d3468">get_child_file</a>(<a class="code" href="../../de/dde/struct__vfile__t.html">vfile_t</a> *file);</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
+<div class="line"><a name="l00128"></a><span class="lineno"><a class="line" href="../../d1/d92/structfs__operation.html">  128</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a name="l00133"></a><span class="lineno"><a class="line" href="../../d1/d92/structfs__operation.html#a1e2957d70ccd4e4732e85af4870cb5d3">  133</a></span>&#160;    <span class="keywordtype">bool</span> *(*check_fs)(<span class="keywordtype">void</span> *pbr);</div>
+<div class="line"><a name="l00138"></a><span class="lineno"><a class="line" href="../../d1/d92/structfs__operation.html#ad921f2b4f6c9b2c871a8eb4f0b07df2f">  138</a></span>&#160;    <a class="code" href="../../d5/dfa/vfs_8h.html#a04869525957df4a1112f42464d5ef9a9">fs_t</a> *(*open_fs)(<a class="code" href="../../d1/d2a/structdisk__t.html">disk_t</a> *disk, <span class="keywordtype">void</span> *pbr);</div>
+<div class="line"><a name="l00143"></a><span class="lineno"><a class="line" href="../../d1/d92/structfs__operation.html#a303612a99674cd9410fd7d11049bbbec">  143</a></span>&#160;    void (*free_fs)(<a class="code" href="../../d5/dfa/vfs_8h.html#a04869525957df4a1112f42464d5ef9a9">fs_t</a> *<a class="code" href="../../de/dde/struct__vfile__t.html#a977faff3aa47a79084b65b9c2892cce5">fs</a>);</div>
+<div class="line"><a name="l00148"></a><span class="lineno"><a class="line" href="../../d1/d92/structfs__operation.html#a0a5b896d6e8fa430d0848bcfec76bb19">  148</a></span>&#160;    <a class="code" href="../../de/dde/struct__vfile__t.html">vfile_t</a> *(*get_root)(<a class="code" href="../../d5/dfa/vfs_8h.html#a04869525957df4a1112f42464d5ef9a9">fs_t</a> *<a class="code" href="../../de/dde/struct__vfile__t.html#a977faff3aa47a79084b65b9c2892cce5">fs</a>);</div>
+<div class="line"><a name="l00153"></a><span class="lineno"><a class="line" href="../../d1/d92/structfs__operation.html#aeb3fef2d48672368f6bd27f9464fb8df">  153</a></span>&#160;    <a class="code" href="../../de/dde/struct__vfile__t.html">vfile_t</a> *(*get_next_file)(<a class="code" href="../../d5/dfa/vfs_8h.html#a04869525957df4a1112f42464d5ef9a9">fs_t</a> *<a class="code" href="../../de/dde/struct__vfile__t.html#a977faff3aa47a79084b65b9c2892cce5">fs</a>, <a class="code" href="../../de/dde/struct__vfile__t.html">vfile_t</a> *file);</div>
+<div class="line"><a name="l00158"></a><span class="lineno"><a class="line" href="../../d1/d92/structfs__operation.html#a2b8a6e78ec52bb8c89e3171c7b2a218d">  158</a></span>&#160;    <a class="code" href="../../de/dde/struct__vfile__t.html">vfile_t</a> *(*get_child_file)(<a class="code" href="../../d5/dfa/vfs_8h.html#a04869525957df4a1112f42464d5ef9a9">fs_t</a> *<a class="code" href="../../de/dde/struct__vfile__t.html#a977faff3aa47a79084b65b9c2892cce5">fs</a>, <a class="code" href="../../de/dde/struct__vfile__t.html">vfile_t</a> *file);</div>
+<div class="line"><a name="l00163"></a><span class="lineno"><a class="line" href="../../d1/d92/structfs__operation.html#ab98be4003aa7a0222d732314fa0efdef">  163</a></span>&#160;    void (*<a class="code" href="../../d5/dfa/vfs_8h.html#aae52b9cdcaf5292058a134374251a2b3">read_file</a>)(<a class="code" href="../../d5/dfa/vfs_8h.html#a04869525957df4a1112f42464d5ef9a9">fs_t</a> *<a class="code" href="../../de/dde/struct__vfile__t.html#a977faff3aa47a79084b65b9c2892cce5">fs</a>, <a class="code" href="../../de/dde/struct__vfile__t.html">vfile_t</a> *file, <span class="keywordtype">void</span> *buffer);</div>
+<div class="line"><a name="l00168"></a><span class="lineno"><a class="line" href="../../d1/d92/structfs__operation.html#ad623083869749abd03f361bff82a7bc1">  168</a></span>&#160;    void (*<a class="code" href="../../d5/dfa/vfs_8h.html#ac94fb7c906335451c6d779878706717b">write_file</a>)(<a class="code" href="../../d5/dfa/vfs_8h.html#a04869525957df4a1112f42464d5ef9a9">fs_t</a> *<a class="code" href="../../de/dde/struct__vfile__t.html#a977faff3aa47a79084b65b9c2892cce5">fs</a>, <a class="code" href="../../de/dde/struct__vfile__t.html">vfile_t</a> *file, <span class="keywordtype">void</span> *buffer, <span class="keywordtype">size_t</span> <a class="code" href="../../de/dde/struct__vfile__t.html#aa34fcd6179e8bcbeb3fc9c6f41e72c45">size</a>);</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;} <a class="code" href="../../d1/d92/structfs__operation.html">fs_operation</a>;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160; </div>
+<div class="line"><a name="l00175"></a><span class="lineno"><a class="line" href="../../d5/dfa/vfs_8h.html#a2182db24e0d243548414bab280fd2e77">  175</a></span>&#160;<span class="preprocessor">#define FSOPGROUP_NUM (16)</span></div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160; </div>
+<div class="line"><a name="l00181"></a><span class="lineno"><a class="line" href="../../d5/dfa/vfs_8h.html#a951ca0a566ccbbad5a3e4ef633d4d565">  181</a></span>&#160;EXTERN <a class="code" href="../../d1/d92/structfs__operation.html">fs_operation</a> *<a class="code" href="../../d5/dfa/vfs_8h.html#a951ca0a566ccbbad5a3e4ef633d4d565">FSOPGROUPS</a>[<a class="code" href="../../d5/dfa/vfs_8h.html#a2182db24e0d243548414bab280fd2e77">FSOPGROUP_NUM</a>];</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="avfs_8h_html_a57de2d0bd1cd5133b4d042d5b91acf4b"><div class="ttname"><a href="../../d5/dfa/vfs_8h.html#a57de2d0bd1cd5133b4d042d5b91acf4b">inode</a></div><div class="ttdeci">void inode</div><div class="ttdoc">inode</div><div class="ttdef"><b>Definition:</b> vfs.h:28</div></div>
+<div class="ttc" id="astruct__vfile__t_html_aaf86f817c58419e4f5e3c1e3266c0a80"><div class="ttname"><a href="../../de/dde/struct__vfile__t.html#aaf86f817c58419e4f5e3c1e3266c0a80">_vfile_t::name</a></div><div class="ttdeci">wchar * name</div><div class="ttdoc">文件名</div><div class="ttdef"><b>Definition:</b> vfs.h:60</div></div>
+<div class="ttc" id="astructfs__operation_html"><div class="ttname"><a href="../../d1/d92/structfs__operation.html">fs_operation</a></div><div class="ttdoc">文件系统操作 每一个不同的FS都要填满这个结构体并将其指针加入到下方FSOP数组中</div><div class="ttdef"><b>Definition:</b> vfs.h:128</div></div>
+<div class="ttc" id="astruct__vfile__t_html_aaea067d88c025a8509a9d1840e49278f"><div class="ttname"><a href="../../de/dde/struct__vfile__t.html#aaea067d88c025a8509a9d1840e49278f">_vfile_t::is_directory</a></div><div class="ttdeci">bool is_directory</div><div class="ttdoc">是否为目录</div><div class="ttdef"><b>Definition:</b> vfs.h:70</div></div>
+<div class="ttc" id="avfs_8h_html_a2182db24e0d243548414bab280fd2e77"><div class="ttname"><a href="../../d5/dfa/vfs_8h.html#a2182db24e0d243548414bab280fd2e77">FSOPGROUP_NUM</a></div><div class="ttdeci">#define FSOPGROUP_NUM</div><div class="ttdoc">文件系统操作组数</div><div class="ttdef"><b>Definition:</b> vfs.h:175</div></div>
+<div class="ttc" id="astruct__vfile__t_html_a49f5ba1314557a8ef58229ac79231c5c"><div class="ttname"><a href="../../de/dde/struct__vfile__t.html#a49f5ba1314557a8ef58229ac79231c5c">_vfile_t::parentfile</a></div><div class="ttdeci">NONNULL struct _vfile_t * parentfile</div><div class="ttdoc">父文件</div><div class="ttdef"><b>Definition:</b> vfs.h:85</div></div>
+<div class="ttc" id="astruct__vfile__t_html_a2432d158ce2160e786dad255fb2f1b95"><div class="ttname"><a href="../../de/dde/struct__vfile__t.html#a2432d158ce2160e786dad255fb2f1b95">_vfile_t::node</a></div><div class="ttdeci">inode * node</div><div class="ttdoc">inode</div><div class="ttdef"><b>Definition:</b> vfs.h:50</div></div>
+<div class="ttc" id="astruct__vfile__t_html_a42a606a8feaa05c5311f3fb7ecc0bd4c"><div class="ttname"><a href="../../de/dde/struct__vfile__t.html#a42a606a8feaa05c5311f3fb7ecc0bd4c">_vfile_t::childfile</a></div><div class="ttdeci">NULLABLE struct _vfile_t * childfile</div><div class="ttdoc">子文件</div><div class="ttdef"><b>Definition:</b> vfs.h:80</div></div>
+<div class="ttc" id="astruct__vfile__t_html"><div class="ttname"><a href="../../de/dde/struct__vfile__t.html">_vfile_t</a></div><div class="ttdoc">虚拟文件系统文件</div><div class="ttdef"><b>Definition:</b> vfs.h:40</div></div>
+<div class="ttc" id="avfs_8h_html_a951ca0a566ccbbad5a3e4ef633d4d565"><div class="ttname"><a href="../../d5/dfa/vfs_8h.html#a951ca0a566ccbbad5a3e4ef633d4d565">FSOPGROUPS</a></div><div class="ttdeci">EXTERN fs_operation * FSOPGROUPS[FSOPGROUP_NUM]</div><div class="ttdoc">文件系统操作组数组</div><div class="ttdef"><b>Definition:</b> vfs.h:181</div></div>
+<div class="ttc" id="adisk_8h_html"><div class="ttname"><a href="../../d2/d50/disk_8h.html">disk.h</a></div><div class="ttdoc">磁盘驱动</div></div>
+<div class="ttc" id="astruct__vfile__t_html_a977faff3aa47a79084b65b9c2892cce5"><div class="ttname"><a href="../../de/dde/struct__vfile__t.html#a977faff3aa47a79084b65b9c2892cce5">_vfile_t::fs</a></div><div class="ttdeci">vfs_t * fs</div><div class="ttdoc">文件系统</div><div class="ttdef"><b>Definition:</b> vfs.h:45</div></div>
+<div class="ttc" id="avfs_8h_html_a04869525957df4a1112f42464d5ef9a9"><div class="ttname"><a href="../../d5/dfa/vfs_8h.html#a04869525957df4a1112f42464d5ef9a9">fs_t</a></div><div class="ttdeci">void fs_t</div><div class="ttdoc">文件系统</div><div class="ttdef"><b>Definition:</b> vfs.h:23</div></div>
+<div class="ttc" id="astruct__vfile__t_html_a7926abf02c020003452340b8a7b4e66f"><div class="ttname"><a href="../../de/dde/struct__vfile__t.html#a7926abf02c020003452340b8a7b4e66f">_vfile_t::nextfile</a></div><div class="ttdeci">NULLABLE struct _vfile_t * nextfile</div><div class="ttdoc">下个文件</div><div class="ttdef"><b>Definition:</b> vfs.h:75</div></div>
+<div class="ttc" id="avfs_8h_html_ac94fb7c906335451c6d779878706717b"><div class="ttname"><a href="../../d5/dfa/vfs_8h.html#ac94fb7c906335451c6d779878706717b">write_file</a></div><div class="ttdeci">PUBLIC void write_file(NONNULL vfile_t *file, NONNULL void *buffer, size_t size)</div><div class="ttdoc">写入文件</div></div>
+<div class="ttc" id="astruct__vfile__t_html_a01ba1fd2c844a5720d769b5de98e98eb"><div class="ttname"><a href="../../de/dde/struct__vfile__t.html#a01ba1fd2c844a5720d769b5de98e98eb">_vfile_t::is_last</a></div><div class="ttdeci">bool is_last</div><div class="ttdoc">是否为最后一个文件</div><div class="ttdef"><b>Definition:</b> vfs.h:65</div></div>
+<div class="ttc" id="aheap_8c_html_a854352f53b148adc24983a58a1866d66"><div class="ttname"><a href="../../d2/d29/heap_8c.html#a854352f53b148adc24983a58a1866d66">size</a></div><div class="ttdeci">size_t size</div><div class="ttdoc">大小</div><div class="ttdef"><b>Definition:</b> heap.c:30</div></div>
+<div class="ttc" id="avfs_8h_html_abc0b74e90bc58dfc55430a47ae6c0f64"><div class="ttname"><a href="../../d5/dfa/vfs_8h.html#abc0b74e90bc58dfc55430a47ae6c0f64">free_vfile</a></div><div class="ttdeci">PUBLIC void free_vfile(NONNULL vfile_t *file)</div><div class="ttdoc">释放vfile对象</div></div>
+<div class="ttc" id="avfs_8h_html_a02af861aa03e1a6df458c1e1321d3468"><div class="ttname"><a href="../../d5/dfa/vfs_8h.html#a02af861aa03e1a6df458c1e1321d3468">get_child_file</a></div><div class="ttdeci">NULLABLE PUBLIC vfile_t * get_child_file(vfile_t *file)</div><div class="ttdoc">获得子文件</div></div>
+<div class="ttc" id="avfs_8h_html_aae52b9cdcaf5292058a134374251a2b3"><div class="ttname"><a href="../../d5/dfa/vfs_8h.html#aae52b9cdcaf5292058a134374251a2b3">read_file</a></div><div class="ttdeci">PUBLIC void read_file(NONNULL vfile_t *file, NONNULL void *buffer)</div><div class="ttdoc">读取文件</div></div>
+<div class="ttc" id="astructdisk__t_html"><div class="ttname"><a href="../../d1/d2a/structdisk__t.html">disk_t</a></div><div class="ttdoc">磁盘(把每个分区视作独立的硬盘)</div><div class="ttdef"><b>Definition:</b> disk.h:22</div></div>
+<div class="ttc" id="avfs_8h_html_a1bfebb35eb9e3ee94efeb0a8eb153016"><div class="ttname"><a href="../../d5/dfa/vfs_8h.html#a1bfebb35eb9e3ee94efeb0a8eb153016">vfile_t</a></div><div class="ttdeci">struct _vfile_t vfile_t</div><div class="ttdoc">虚拟文件系统文件</div></div>
+<div class="ttc" id="avfs_8h_html_ac0ef8272d0ba05d00623c20bf8928dee"><div class="ttname"><a href="../../d5/dfa/vfs_8h.html#ac0ef8272d0ba05d00623c20bf8928dee">vfs_t</a></div><div class="ttdeci">struct _vfs_t vfs_t</div><div class="ttdoc">VFS虚拟文件系统</div><div class="ttdef"><b>Definition:</b> vfs.h:34</div></div>
+<div class="ttc" id="astruct__vfile__t_html_aa34fcd6179e8bcbeb3fc9c6f41e72c45"><div class="ttname"><a href="../../de/dde/struct__vfile__t.html#aa34fcd6179e8bcbeb3fc9c6f41e72c45">_vfile_t::size</a></div><div class="ttdeci">size_t size</div><div class="ttdoc">大小</div><div class="ttdef"><b>Definition:</b> vfs.h:55</div></div>
+<div class="ttc" id="avfs_8h_html_ac98ce44f27f2cb3bde3cb3ce6b35e96f"><div class="ttname"><a href="../../d5/dfa/vfs_8h.html#ac98ce44f27f2cb3bde3cb3ce6b35e96f">get_next_file</a></div><div class="ttdeci">NULLABLE PUBLIC vfile_t * get_next_file(vfile_t *file)</div><div class="ttdoc">获得下个文件</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

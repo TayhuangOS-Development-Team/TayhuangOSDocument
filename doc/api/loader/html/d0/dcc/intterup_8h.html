@@ -1,0 +1,294 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>TayhuangOS GRUB2 Loader: init/intterup.h 文件参考</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">TayhuangOS GRUB2 Loader
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_b1b7c248586c03e23e648237ba8dbb8d.html">init</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">宏定义</a> &#124;
+<a href="#typedef-members">类型定义</a> &#124;
+<a href="#func-members">函数</a> &#124;
+<a href="#var-members">变量</a>  </div>
+  <div class="headertitle">
+<div class="title">intterup.h 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>中断  
+<a href="#details">更多...</a></p>
+<div class="textblock"><code>#include &lt;tayhuang/attributes.h&gt;</code><br />
+<code>#include &lt;tayhuang/descs.h&gt;</code><br />
+</div>
+<p><a href="../../d0/dcc/intterup_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:a6eb438cc75ca0a7284346ea8b3f94999"><td class="memItemLeft" align="right" valign="top"><a id="a6eb438cc75ca0a7284346ea8b3f94999"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>IDT_SIZE</b>&#160;&#160;&#160;(128)</td></tr>
+<tr class="separator:a6eb438cc75ca0a7284346ea8b3f94999"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+类型定义</h2></td></tr>
+<tr class="memitem:aa8f585423ca140a43921e7877a90e660"><td class="memItemLeft" align="right" valign="top"><a id="aa8f585423ca140a43921e7877a90e660"></a>
+typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><b>irq_handler</b>) (int)</td></tr>
+<tr class="separator:aa8f585423ca140a43921e7877a90e660"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add2659cdf5414e6ab00bc5c7471a07f8"><td class="memItemLeft" align="right" valign="top"><a id="add2659cdf5414e6ab00bc5c7471a07f8"></a>
+typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><b>int_handler</b>) (void)</td></tr>
+<tr class="separator:add2659cdf5414e6ab00bc5c7471a07f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:aab55b032909e56da6c1af91f185a15f0"><td class="memItemLeft" align="right" valign="top"><a id="aab55b032909e56da6c1af91f185a15f0"></a>
+ASSEMBLY PUBLIC void&#160;</td><td class="memItemRight" valign="bottom"><b>divide_by_zero_error</b> (void)</td></tr>
+<tr class="separator:aab55b032909e56da6c1af91f185a15f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc61b768f33ba1f033e18d53625d8370"><td class="memItemLeft" align="right" valign="top"><a id="afc61b768f33ba1f033e18d53625d8370"></a>
+ASSEMBLY PUBLIC void&#160;</td><td class="memItemRight" valign="bottom"><b>single_step_debug</b> (void)</td></tr>
+<tr class="separator:afc61b768f33ba1f033e18d53625d8370"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44a2fc259fa45c973822d254a3d92e4d"><td class="memItemLeft" align="right" valign="top"><a id="a44a2fc259fa45c973822d254a3d92e4d"></a>
+ASSEMBLY PUBLIC void&#160;</td><td class="memItemRight" valign="bottom"><b>non_maskable_interrup</b> (void)</td></tr>
+<tr class="separator:a44a2fc259fa45c973822d254a3d92e4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac371b0bb683cab11fc94b1f57fd7ff5f"><td class="memItemLeft" align="right" valign="top"><a id="ac371b0bb683cab11fc94b1f57fd7ff5f"></a>
+ASSEMBLY PUBLIC void&#160;</td><td class="memItemRight" valign="bottom"><b>breakpoint</b> (void)</td></tr>
+<tr class="separator:ac371b0bb683cab11fc94b1f57fd7ff5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c23e56439d3f55326cf4f457ad6faf5"><td class="memItemLeft" align="right" valign="top"><a id="a5c23e56439d3f55326cf4f457ad6faf5"></a>
+ASSEMBLY PUBLIC void&#160;</td><td class="memItemRight" valign="bottom"><b>overflow</b> (void)</td></tr>
+<tr class="separator:a5c23e56439d3f55326cf4f457ad6faf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71829f74ad51c3d00bb0df18f4e39dca"><td class="memItemLeft" align="right" valign="top"><a id="a71829f74ad51c3d00bb0df18f4e39dca"></a>
+ASSEMBLY PUBLIC void&#160;</td><td class="memItemRight" valign="bottom"><b>bound_range_exceeded</b> (void)</td></tr>
+<tr class="separator:a71829f74ad51c3d00bb0df18f4e39dca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae81b25fc7be761a74f339d378c4dfa12"><td class="memItemLeft" align="right" valign="top"><a id="ae81b25fc7be761a74f339d378c4dfa12"></a>
+ASSEMBLY PUBLIC void&#160;</td><td class="memItemRight" valign="bottom"><b>invalid_opcode</b> (void)</td></tr>
+<tr class="separator:ae81b25fc7be761a74f339d378c4dfa12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a650331f775149c65c63fe147a5e3a349"><td class="memItemLeft" align="right" valign="top"><a id="a650331f775149c65c63fe147a5e3a349"></a>
+ASSEMBLY PUBLIC void&#160;</td><td class="memItemRight" valign="bottom"><b>device_not_available</b> (void)</td></tr>
+<tr class="separator:a650331f775149c65c63fe147a5e3a349"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adcd0d9481ddc7ebc34fc6c425b484fed"><td class="memItemLeft" align="right" valign="top"><a id="adcd0d9481ddc7ebc34fc6c425b484fed"></a>
+ASSEMBLY PUBLIC void&#160;</td><td class="memItemRight" valign="bottom"><b>double_fault</b> (void)</td></tr>
+<tr class="separator:adcd0d9481ddc7ebc34fc6c425b484fed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30cd7878db12440688db790dea4d6318"><td class="memItemLeft" align="right" valign="top"><a id="a30cd7878db12440688db790dea4d6318"></a>
+ASSEMBLY PUBLIC void&#160;</td><td class="memItemRight" valign="bottom"><b>coprocessor_segment_overrun</b> (void)</td></tr>
+<tr class="separator:a30cd7878db12440688db790dea4d6318"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b248d087bd636af0cc362c7eef6822a"><td class="memItemLeft" align="right" valign="top"><a id="a5b248d087bd636af0cc362c7eef6822a"></a>
+ASSEMBLY PUBLIC void&#160;</td><td class="memItemRight" valign="bottom"><b>invalid_tss</b> (void)</td></tr>
+<tr class="separator:a5b248d087bd636af0cc362c7eef6822a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af37406317fe6d4cb4ed97c791355ebcd"><td class="memItemLeft" align="right" valign="top"><a id="af37406317fe6d4cb4ed97c791355ebcd"></a>
+ASSEMBLY PUBLIC void&#160;</td><td class="memItemRight" valign="bottom"><b>segment_not_present</b> (void)</td></tr>
+<tr class="separator:af37406317fe6d4cb4ed97c791355ebcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad46ffcc51bc2267a55dfa1a193873eb8"><td class="memItemLeft" align="right" valign="top"><a id="ad46ffcc51bc2267a55dfa1a193873eb8"></a>
+ASSEMBLY PUBLIC void&#160;</td><td class="memItemRight" valign="bottom"><b>stack_segment_fault</b> (void)</td></tr>
+<tr class="separator:ad46ffcc51bc2267a55dfa1a193873eb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b45607b726601ea1a8f2f4111c14d10"><td class="memItemLeft" align="right" valign="top"><a id="a9b45607b726601ea1a8f2f4111c14d10"></a>
+ASSEMBLY PUBLIC void&#160;</td><td class="memItemRight" valign="bottom"><b>general_protection_fault</b> (void)</td></tr>
+<tr class="separator:a9b45607b726601ea1a8f2f4111c14d10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5564823d5770d3597091a9d1868a4cf7"><td class="memItemLeft" align="right" valign="top"><a id="a5564823d5770d3597091a9d1868a4cf7"></a>
+ASSEMBLY PUBLIC void&#160;</td><td class="memItemRight" valign="bottom"><b>page_fault</b> (void)</td></tr>
+<tr class="separator:a5564823d5770d3597091a9d1868a4cf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a311a1fc6872c2f2e6cb52bb732a15498"><td class="memItemLeft" align="right" valign="top"><a id="a311a1fc6872c2f2e6cb52bb732a15498"></a>
+ASSEMBLY PUBLIC void&#160;</td><td class="memItemRight" valign="bottom"><b>reserved1_excepetion</b> (void)</td></tr>
+<tr class="separator:a311a1fc6872c2f2e6cb52bb732a15498"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21cbb0ae0f4644c3c5673278cc1da6e4"><td class="memItemLeft" align="right" valign="top"><a id="a21cbb0ae0f4644c3c5673278cc1da6e4"></a>
+ASSEMBLY PUBLIC void&#160;</td><td class="memItemRight" valign="bottom"><b>x87_floating_point_exception</b> (void)</td></tr>
+<tr class="separator:a21cbb0ae0f4644c3c5673278cc1da6e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab71a36182d81be27d59dcdd51b095e6b"><td class="memItemLeft" align="right" valign="top"><a id="ab71a36182d81be27d59dcdd51b095e6b"></a>
+ASSEMBLY PUBLIC void&#160;</td><td class="memItemRight" valign="bottom"><b>alignment_check</b> (void)</td></tr>
+<tr class="separator:ab71a36182d81be27d59dcdd51b095e6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97c6937a7f4781bafb60b8eea5e16d2d"><td class="memItemLeft" align="right" valign="top"><a id="a97c6937a7f4781bafb60b8eea5e16d2d"></a>
+ASSEMBLY PUBLIC void&#160;</td><td class="memItemRight" valign="bottom"><b>machine_check</b> (void)</td></tr>
+<tr class="separator:a97c6937a7f4781bafb60b8eea5e16d2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7136f7396fc0eae7754bf896b9dbf92b"><td class="memItemLeft" align="right" valign="top"><a id="a7136f7396fc0eae7754bf896b9dbf92b"></a>
+ASSEMBLY PUBLIC void&#160;</td><td class="memItemRight" valign="bottom"><b>simd_floating_point_exception</b> (void)</td></tr>
+<tr class="separator:a7136f7396fc0eae7754bf896b9dbf92b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a567528aa47dcb24746a5012fef389eac"><td class="memItemLeft" align="right" valign="top"><a id="a567528aa47dcb24746a5012fef389eac"></a>
+ASSEMBLY PUBLIC void&#160;</td><td class="memItemRight" valign="bottom"><b>virtualization_exception</b> (void)</td></tr>
+<tr class="separator:a567528aa47dcb24746a5012fef389eac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe7cccb33060b7c7277a4e352052880b"><td class="memItemLeft" align="right" valign="top"><a id="afe7cccb33060b7c7277a4e352052880b"></a>
+ASSEMBLY PUBLIC void&#160;</td><td class="memItemRight" valign="bottom"><b>control_protection_exception</b> (void)</td></tr>
+<tr class="separator:afe7cccb33060b7c7277a4e352052880b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae51cc53d9aff364fc88e5f21e2afaf55"><td class="memItemLeft" align="right" valign="top"><a id="ae51cc53d9aff364fc88e5f21e2afaf55"></a>
+ASSEMBLY PUBLIC void&#160;</td><td class="memItemRight" valign="bottom"><b>reserved2_excepetion</b> (void)</td></tr>
+<tr class="separator:ae51cc53d9aff364fc88e5f21e2afaf55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ab4c118566d5b6ac333dfd650d0f406"><td class="memItemLeft" align="right" valign="top"><a id="a0ab4c118566d5b6ac333dfd650d0f406"></a>
+ASSEMBLY PUBLIC void&#160;</td><td class="memItemRight" valign="bottom"><b>reserved3_excepetion</b> (void)</td></tr>
+<tr class="separator:a0ab4c118566d5b6ac333dfd650d0f406"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0dd2ff9d39e95b212354889b78a96ad5"><td class="memItemLeft" align="right" valign="top"><a id="a0dd2ff9d39e95b212354889b78a96ad5"></a>
+ASSEMBLY PUBLIC void&#160;</td><td class="memItemRight" valign="bottom"><b>reserved4_excepetion</b> (void)</td></tr>
+<tr class="separator:a0dd2ff9d39e95b212354889b78a96ad5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a065944cef4531b8d56a48e1d47b63bf0"><td class="memItemLeft" align="right" valign="top"><a id="a065944cef4531b8d56a48e1d47b63bf0"></a>
+ASSEMBLY PUBLIC void&#160;</td><td class="memItemRight" valign="bottom"><b>reserved5_excepetion</b> (void)</td></tr>
+<tr class="separator:a065944cef4531b8d56a48e1d47b63bf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ef33119d6267f17d8184eb97011f0bc"><td class="memItemLeft" align="right" valign="top"><a id="a0ef33119d6267f17d8184eb97011f0bc"></a>
+ASSEMBLY PUBLIC void&#160;</td><td class="memItemRight" valign="bottom"><b>reserved6_excepetion</b> (void)</td></tr>
+<tr class="separator:a0ef33119d6267f17d8184eb97011f0bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adde4671aed15323e0200399b3958d4cf"><td class="memItemLeft" align="right" valign="top"><a id="adde4671aed15323e0200399b3958d4cf"></a>
+ASSEMBLY PUBLIC void&#160;</td><td class="memItemRight" valign="bottom"><b>reserved7_excepetion</b> (void)</td></tr>
+<tr class="separator:adde4671aed15323e0200399b3958d4cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f09ddc60fb8dbb334c2e5b1ac4f6e5d"><td class="memItemLeft" align="right" valign="top"><a id="a7f09ddc60fb8dbb334c2e5b1ac4f6e5d"></a>
+ASSEMBLY PUBLIC void&#160;</td><td class="memItemRight" valign="bottom"><b>hypervisor_injection_exception</b> (void)</td></tr>
+<tr class="separator:a7f09ddc60fb8dbb334c2e5b1ac4f6e5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a156935cc3382026ac4bc4a307722cd7d"><td class="memItemLeft" align="right" valign="top"><a id="a156935cc3382026ac4bc4a307722cd7d"></a>
+ASSEMBLY PUBLIC void&#160;</td><td class="memItemRight" valign="bottom"><b>vmm_communication_exception</b> (void)</td></tr>
+<tr class="separator:a156935cc3382026ac4bc4a307722cd7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34c7e490fe0b402da0eb5ca10df7ed85"><td class="memItemLeft" align="right" valign="top"><a id="a34c7e490fe0b402da0eb5ca10df7ed85"></a>
+ASSEMBLY PUBLIC void&#160;</td><td class="memItemRight" valign="bottom"><b>security_exception</b> (void)</td></tr>
+<tr class="separator:a34c7e490fe0b402da0eb5ca10df7ed85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4793916c4caf3ade91a4cdf8ee3e944d"><td class="memItemLeft" align="right" valign="top"><a id="a4793916c4caf3ade91a4cdf8ee3e944d"></a>
+ASSEMBLY PUBLIC void&#160;</td><td class="memItemRight" valign="bottom"><b>reserved8_excepetion</b> (void)</td></tr>
+<tr class="separator:a4793916c4caf3ade91a4cdf8ee3e944d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a0f07620571a4cb3409841d55335333"><td class="memItemLeft" align="right" valign="top"><a id="a5a0f07620571a4cb3409841d55335333"></a>
+ASSEMBLY PUBLIC void&#160;</td><td class="memItemRight" valign="bottom"><b>irq0_handler</b> (void)</td></tr>
+<tr class="separator:a5a0f07620571a4cb3409841d55335333"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8d27c09164b02e650ebc8d749b28a6e"><td class="memItemLeft" align="right" valign="top"><a id="aa8d27c09164b02e650ebc8d749b28a6e"></a>
+ASSEMBLY PUBLIC void&#160;</td><td class="memItemRight" valign="bottom"><b>irq1_handler</b> (void)</td></tr>
+<tr class="separator:aa8d27c09164b02e650ebc8d749b28a6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea3074213db9f99a6d447741f76ea68c"><td class="memItemLeft" align="right" valign="top"><a id="aea3074213db9f99a6d447741f76ea68c"></a>
+ASSEMBLY PUBLIC void&#160;</td><td class="memItemRight" valign="bottom"><b>irq2_handler</b> (void)</td></tr>
+<tr class="separator:aea3074213db9f99a6d447741f76ea68c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cdf954a84eae0943a437bf9455901d9"><td class="memItemLeft" align="right" valign="top"><a id="a1cdf954a84eae0943a437bf9455901d9"></a>
+ASSEMBLY PUBLIC void&#160;</td><td class="memItemRight" valign="bottom"><b>irq3_handler</b> (void)</td></tr>
+<tr class="separator:a1cdf954a84eae0943a437bf9455901d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d3dc1df4611e20aed79c8c365cd4105"><td class="memItemLeft" align="right" valign="top"><a id="a8d3dc1df4611e20aed79c8c365cd4105"></a>
+ASSEMBLY PUBLIC void&#160;</td><td class="memItemRight" valign="bottom"><b>irq4_handler</b> (void)</td></tr>
+<tr class="separator:a8d3dc1df4611e20aed79c8c365cd4105"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34d42a88bdd89e39b33f33069d656353"><td class="memItemLeft" align="right" valign="top"><a id="a34d42a88bdd89e39b33f33069d656353"></a>
+ASSEMBLY PUBLIC void&#160;</td><td class="memItemRight" valign="bottom"><b>irq5_handler</b> (void)</td></tr>
+<tr class="separator:a34d42a88bdd89e39b33f33069d656353"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4381d4aec8d86b9d32ab8d09b8bc5e2"><td class="memItemLeft" align="right" valign="top"><a id="aa4381d4aec8d86b9d32ab8d09b8bc5e2"></a>
+ASSEMBLY PUBLIC void&#160;</td><td class="memItemRight" valign="bottom"><b>irq6_handler</b> (void)</td></tr>
+<tr class="separator:aa4381d4aec8d86b9d32ab8d09b8bc5e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c785bdcc6af9f7ce9cb802c8b57f34a"><td class="memItemLeft" align="right" valign="top"><a id="a1c785bdcc6af9f7ce9cb802c8b57f34a"></a>
+ASSEMBLY PUBLIC void&#160;</td><td class="memItemRight" valign="bottom"><b>irq7_handler</b> (void)</td></tr>
+<tr class="separator:a1c785bdcc6af9f7ce9cb802c8b57f34a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9043961873eb95c0f5c0f60479388575"><td class="memItemLeft" align="right" valign="top"><a id="a9043961873eb95c0f5c0f60479388575"></a>
+ASSEMBLY PUBLIC void&#160;</td><td class="memItemRight" valign="bottom"><b>irq8_handler</b> (void)</td></tr>
+<tr class="separator:a9043961873eb95c0f5c0f60479388575"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36e856d551dc1815c09ecc1c7d9b857f"><td class="memItemLeft" align="right" valign="top"><a id="a36e856d551dc1815c09ecc1c7d9b857f"></a>
+ASSEMBLY PUBLIC void&#160;</td><td class="memItemRight" valign="bottom"><b>irq9_handler</b> (void)</td></tr>
+<tr class="separator:a36e856d551dc1815c09ecc1c7d9b857f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a964e0683f35818d554f56871588ec6c8"><td class="memItemLeft" align="right" valign="top"><a id="a964e0683f35818d554f56871588ec6c8"></a>
+ASSEMBLY PUBLIC void&#160;</td><td class="memItemRight" valign="bottom"><b>irq10_handler</b> (void)</td></tr>
+<tr class="separator:a964e0683f35818d554f56871588ec6c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e4d8457a7abdff7c594b3c13d297a66"><td class="memItemLeft" align="right" valign="top"><a id="a7e4d8457a7abdff7c594b3c13d297a66"></a>
+ASSEMBLY PUBLIC void&#160;</td><td class="memItemRight" valign="bottom"><b>irq11_handler</b> (void)</td></tr>
+<tr class="separator:a7e4d8457a7abdff7c594b3c13d297a66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a879400d7e897585445a11d75cec2e882"><td class="memItemLeft" align="right" valign="top"><a id="a879400d7e897585445a11d75cec2e882"></a>
+ASSEMBLY PUBLIC void&#160;</td><td class="memItemRight" valign="bottom"><b>irq12_handler</b> (void)</td></tr>
+<tr class="separator:a879400d7e897585445a11d75cec2e882"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7fe79817a1220af46247547875ca42a"><td class="memItemLeft" align="right" valign="top"><a id="aa7fe79817a1220af46247547875ca42a"></a>
+ASSEMBLY PUBLIC void&#160;</td><td class="memItemRight" valign="bottom"><b>irq13_handler</b> (void)</td></tr>
+<tr class="separator:aa7fe79817a1220af46247547875ca42a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6866a3103d4a54f7273910c8093bb2a"><td class="memItemLeft" align="right" valign="top"><a id="aa6866a3103d4a54f7273910c8093bb2a"></a>
+ASSEMBLY PUBLIC void&#160;</td><td class="memItemRight" valign="bottom"><b>irq14_handler</b> (void)</td></tr>
+<tr class="separator:aa6866a3103d4a54f7273910c8093bb2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65ec3ee5d3b3136ffd0d9b029bf718c2"><td class="memItemLeft" align="right" valign="top"><a id="a65ec3ee5d3b3136ffd0d9b029bf718c2"></a>
+ASSEMBLY PUBLIC void&#160;</td><td class="memItemRight" valign="bottom"><b>irq15_handler</b> (void)</td></tr>
+<tr class="separator:a65ec3ee5d3b3136ffd0d9b029bf718c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8dc1297f9afefe6fe579b82533564ad4"><td class="memItemLeft" align="right" valign="top"><a id="a8dc1297f9afefe6fe579b82533564ad4"></a>
+PUBLIC void&#160;</td><td class="memItemRight" valign="bottom"><b>exception_handler</b> (int vector_no, int errcode, int eip, int cs, int eflags)</td></tr>
+<tr class="separator:a8dc1297f9afefe6fe579b82533564ad4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53b554114bf0cf6c65fee840e2bf31a7"><td class="memItemLeft" align="right" valign="top"><a id="a53b554114bf0cf6c65fee840e2bf31a7"></a>
+PUBLIC void&#160;</td><td class="memItemRight" valign="bottom"><b>irq_interrup_handler</b> (int irq)</td></tr>
+<tr class="separator:a53b554114bf0cf6c65fee840e2bf31a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12c6cb56b88d9ff88e94319177c8bd91"><td class="memItemLeft" align="right" valign="top"><a id="a12c6cb56b88d9ff88e94319177c8bd91"></a>
+PUBLIC void&#160;</td><td class="memItemRight" valign="bottom"><b>set_handler</b> (int irq, irq_handler handler)</td></tr>
+<tr class="separator:a12c6cb56b88d9ff88e94319177c8bd91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14a353e4e30f2519f683c54bf68d8f90"><td class="memItemLeft" align="right" valign="top"><a id="a14a353e4e30f2519f683c54bf68d8f90"></a>
+PUBLIC void&#160;</td><td class="memItemRight" valign="bottom"><b>enable_irq</b> (int irq)</td></tr>
+<tr class="separator:a14a353e4e30f2519f683c54bf68d8f90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2bf14dff7ce0734c81426574d38ce9b"><td class="memItemLeft" align="right" valign="top"><a id="af2bf14dff7ce0734c81426574d38ce9b"></a>
+PUBLIC void&#160;</td><td class="memItemRight" valign="bottom"><b>disable_irq</b> (int irq)</td></tr>
+<tr class="separator:af2bf14dff7ce0734c81426574d38ce9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69dad6007356bc9bbacad8953691bab9"><td class="memItemLeft" align="right" valign="top"><a id="a69dad6007356bc9bbacad8953691bab9"></a>
+PUBLIC void&#160;</td><td class="memItemRight" valign="bottom"><b>init_pic</b> (void)</td></tr>
+<tr class="separator:a69dad6007356bc9bbacad8953691bab9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6bf71ac0c84a25e14a0b0383ed6e115"><td class="memItemLeft" align="right" valign="top"><a id="ad6bf71ac0c84a25e14a0b0383ed6e115"></a>
+PUBLIC void&#160;</td><td class="memItemRight" valign="bottom"><b>init_idt_desc</b> (byte vector, byte type, int_handler handler, byte privilege)</td></tr>
+<tr class="separator:ad6bf71ac0c84a25e14a0b0383ed6e115"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f6920c3cc20ba5971cae43a7efaa7e1"><td class="memItemLeft" align="right" valign="top"><a id="a2f6920c3cc20ba5971cae43a7efaa7e1"></a>
+PUBLIC void&#160;</td><td class="memItemRight" valign="bottom"><b>init_idt</b> (void)</td></tr>
+<tr class="separator:a2f6920c3cc20ba5971cae43a7efaa7e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+变量</h2></td></tr>
+<tr class="memitem:ae818a4c9f56bea5021ea3ee6e0fed234"><td class="memItemLeft" align="right" valign="top"><a id="ae818a4c9f56bea5021ea3ee6e0fed234"></a>
+EXTERN PUBLIC gate_desc&#160;</td><td class="memItemRight" valign="bottom"><b>IDT</b> [IDT_SIZE]</td></tr>
+<tr class="separator:ae818a4c9f56bea5021ea3ee6e0fed234"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0765cabb386ef67d36404987e41d328"><td class="memItemLeft" align="right" valign="top"><a id="ad0765cabb386ef67d36404987e41d328"></a>
+EXTERN PUBLIC struct desc_ptr&#160;</td><td class="memItemRight" valign="bottom"><b>idtr</b></td></tr>
+<tr class="separator:ad0765cabb386ef67d36404987e41d328"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>中断 </p>
+<dl class="section author"><dt>作者</dt><dd>theflysong (<a href="#" onclick="location.href='mai'+'lto:'+'son'+'g_'+'of_'+'th'+'e_f'+'ly'+'@16'+'3.'+'com'; return false;">song_<span style="display: none;">.nosp@m.</span>of_t<span style="display: none;">.nosp@m.</span>he_fl<span style="display: none;">.nosp@m.</span>y@16<span style="display: none;">.nosp@m.</span>3.com</a>) </dd></dl>
+<dl class="section version"><dt>版本</dt><dd>alpha-1.0.0 </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>2022-10-23</dd></dl>
+<dl class="section copyright"><dt>版权所有</dt><dd>Copyright (c) 2022 TayhuangOS Development Team SPDX-License-Identifier: LGPL-2.1-only </dd></dl>
+</div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

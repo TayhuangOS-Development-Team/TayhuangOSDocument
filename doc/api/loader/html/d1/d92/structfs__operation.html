@@ -1,0 +1,245 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>TayhuangOS GRUB2 Loader: fs_operation结构体 参考</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">TayhuangOS GRUB2 Loader
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-attribs">成员变量</a>  </div>
+  <div class="headertitle">
+<div class="title">fs_operation结构体 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>文件系统操作 每一个不同的FS都要填满这个结构体并将其指针加入到下方FSOP数组中  
+ <a href="../../d1/d92/structfs__operation.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="../../d5/dfa/vfs_8h_source.html">vfs.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+成员变量</h2></td></tr>
+<tr class="memitem:a1e2957d70ccd4e4732e85af4870cb5d3"><td class="memItemLeft" align="right" valign="top">bool *(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d92/structfs__operation.html#a1e2957d70ccd4e4732e85af4870cb5d3">check_fs</a> )(void *pbr)</td></tr>
+<tr class="memdesc:a1e2957d70ccd4e4732e85af4870cb5d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">判断是否为对应文件系统  <a href="../../d1/d92/structfs__operation.html#a1e2957d70ccd4e4732e85af4870cb5d3">更多...</a><br /></td></tr>
+<tr class="separator:a1e2957d70ccd4e4732e85af4870cb5d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad921f2b4f6c9b2c871a8eb4f0b07df2f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/dfa/vfs_8h.html#a04869525957df4a1112f42464d5ef9a9">fs_t</a> *(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d92/structfs__operation.html#ad921f2b4f6c9b2c871a8eb4f0b07df2f">open_fs</a> )(<a class="el" href="../../d1/d2a/structdisk__t.html">disk_t</a> *disk, void *pbr)</td></tr>
+<tr class="memdesc:ad921f2b4f6c9b2c871a8eb4f0b07df2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">打开文件系统  <a href="../../d1/d92/structfs__operation.html#ad921f2b4f6c9b2c871a8eb4f0b07df2f">更多...</a><br /></td></tr>
+<tr class="separator:ad921f2b4f6c9b2c871a8eb4f0b07df2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a303612a99674cd9410fd7d11049bbbec"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d92/structfs__operation.html#a303612a99674cd9410fd7d11049bbbec">free_fs</a> )(<a class="el" href="../../d5/dfa/vfs_8h.html#a04869525957df4a1112f42464d5ef9a9">fs_t</a> *fs)</td></tr>
+<tr class="memdesc:a303612a99674cd9410fd7d11049bbbec"><td class="mdescLeft">&#160;</td><td class="mdescRight">释放文件系统  <a href="../../d1/d92/structfs__operation.html#a303612a99674cd9410fd7d11049bbbec">更多...</a><br /></td></tr>
+<tr class="separator:a303612a99674cd9410fd7d11049bbbec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a5b896d6e8fa430d0848bcfec76bb19"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/dfa/vfs_8h.html#a1bfebb35eb9e3ee94efeb0a8eb153016">vfile_t</a> *(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d92/structfs__operation.html#a0a5b896d6e8fa430d0848bcfec76bb19">get_root</a> )(<a class="el" href="../../d5/dfa/vfs_8h.html#a04869525957df4a1112f42464d5ef9a9">fs_t</a> *fs)</td></tr>
+<tr class="memdesc:a0a5b896d6e8fa430d0848bcfec76bb19"><td class="mdescLeft">&#160;</td><td class="mdescRight">获得根目录  <a href="../../d1/d92/structfs__operation.html#a0a5b896d6e8fa430d0848bcfec76bb19">更多...</a><br /></td></tr>
+<tr class="separator:a0a5b896d6e8fa430d0848bcfec76bb19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb3fef2d48672368f6bd27f9464fb8df"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/dfa/vfs_8h.html#a1bfebb35eb9e3ee94efeb0a8eb153016">vfile_t</a> *(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d92/structfs__operation.html#aeb3fef2d48672368f6bd27f9464fb8df">get_next_file</a> )(<a class="el" href="../../d5/dfa/vfs_8h.html#a04869525957df4a1112f42464d5ef9a9">fs_t</a> *fs, <a class="el" href="../../d5/dfa/vfs_8h.html#a1bfebb35eb9e3ee94efeb0a8eb153016">vfile_t</a> *file)</td></tr>
+<tr class="memdesc:aeb3fef2d48672368f6bd27f9464fb8df"><td class="mdescLeft">&#160;</td><td class="mdescRight">获得下一个文件  <a href="../../d1/d92/structfs__operation.html#aeb3fef2d48672368f6bd27f9464fb8df">更多...</a><br /></td></tr>
+<tr class="separator:aeb3fef2d48672368f6bd27f9464fb8df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b8a6e78ec52bb8c89e3171c7b2a218d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/dfa/vfs_8h.html#a1bfebb35eb9e3ee94efeb0a8eb153016">vfile_t</a> *(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d92/structfs__operation.html#a2b8a6e78ec52bb8c89e3171c7b2a218d">get_child_file</a> )(<a class="el" href="../../d5/dfa/vfs_8h.html#a04869525957df4a1112f42464d5ef9a9">fs_t</a> *fs, <a class="el" href="../../d5/dfa/vfs_8h.html#a1bfebb35eb9e3ee94efeb0a8eb153016">vfile_t</a> *file)</td></tr>
+<tr class="memdesc:a2b8a6e78ec52bb8c89e3171c7b2a218d"><td class="mdescLeft">&#160;</td><td class="mdescRight">获得子文件  <a href="../../d1/d92/structfs__operation.html#a2b8a6e78ec52bb8c89e3171c7b2a218d">更多...</a><br /></td></tr>
+<tr class="separator:a2b8a6e78ec52bb8c89e3171c7b2a218d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab98be4003aa7a0222d732314fa0efdef"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d92/structfs__operation.html#ab98be4003aa7a0222d732314fa0efdef">read_file</a> )(<a class="el" href="../../d5/dfa/vfs_8h.html#a04869525957df4a1112f42464d5ef9a9">fs_t</a> *fs, <a class="el" href="../../d5/dfa/vfs_8h.html#a1bfebb35eb9e3ee94efeb0a8eb153016">vfile_t</a> *file, void *buffer)</td></tr>
+<tr class="memdesc:ab98be4003aa7a0222d732314fa0efdef"><td class="mdescLeft">&#160;</td><td class="mdescRight">读文件  <a href="../../d1/d92/structfs__operation.html#ab98be4003aa7a0222d732314fa0efdef">更多...</a><br /></td></tr>
+<tr class="separator:ab98be4003aa7a0222d732314fa0efdef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad623083869749abd03f361bff82a7bc1"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d92/structfs__operation.html#ad623083869749abd03f361bff82a7bc1">write_file</a> )(<a class="el" href="../../d5/dfa/vfs_8h.html#a04869525957df4a1112f42464d5ef9a9">fs_t</a> *fs, <a class="el" href="../../d5/dfa/vfs_8h.html#a1bfebb35eb9e3ee94efeb0a8eb153016">vfile_t</a> *file, void *buffer, size_t <a class="el" href="../../d2/d29/heap_8c.html#a854352f53b148adc24983a58a1866d66">size</a>)</td></tr>
+<tr class="memdesc:ad623083869749abd03f361bff82a7bc1"><td class="mdescLeft">&#160;</td><td class="mdescRight">读文件  <a href="../../d1/d92/structfs__operation.html#ad623083869749abd03f361bff82a7bc1">更多...</a><br /></td></tr>
+<tr class="separator:ad623083869749abd03f361bff82a7bc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>文件系统操作 每一个不同的FS都要填满这个结构体并将其指针加入到下方FSOP数组中 </p>
+</div><h2 class="groupheader">结构体成员变量说明</h2>
+<a id="a1e2957d70ccd4e4732e85af4870cb5d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e2957d70ccd4e4732e85af4870cb5d3">&#9670;&nbsp;</a></span>check_fs</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool*(* fs_operation::check_fs) (void *pbr)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>判断是否为对应文件系统 </p>
+
+</div>
+</div>
+<a id="a303612a99674cd9410fd7d11049bbbec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a303612a99674cd9410fd7d11049bbbec">&#9670;&nbsp;</a></span>free_fs</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void(* fs_operation::free_fs) (<a class="el" href="../../d5/dfa/vfs_8h.html#a04869525957df4a1112f42464d5ef9a9">fs_t</a> *fs)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>释放文件系统 </p>
+
+</div>
+</div>
+<a id="a2b8a6e78ec52bb8c89e3171c7b2a218d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b8a6e78ec52bb8c89e3171c7b2a218d">&#9670;&nbsp;</a></span>get_child_file</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d5/dfa/vfs_8h.html#a1bfebb35eb9e3ee94efeb0a8eb153016">vfile_t</a>*(* fs_operation::get_child_file) (<a class="el" href="../../d5/dfa/vfs_8h.html#a04869525957df4a1112f42464d5ef9a9">fs_t</a> *fs, <a class="el" href="../../d5/dfa/vfs_8h.html#a1bfebb35eb9e3ee94efeb0a8eb153016">vfile_t</a> *file)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获得子文件 </p>
+
+</div>
+</div>
+<a id="aeb3fef2d48672368f6bd27f9464fb8df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb3fef2d48672368f6bd27f9464fb8df">&#9670;&nbsp;</a></span>get_next_file</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d5/dfa/vfs_8h.html#a1bfebb35eb9e3ee94efeb0a8eb153016">vfile_t</a>*(* fs_operation::get_next_file) (<a class="el" href="../../d5/dfa/vfs_8h.html#a04869525957df4a1112f42464d5ef9a9">fs_t</a> *fs, <a class="el" href="../../d5/dfa/vfs_8h.html#a1bfebb35eb9e3ee94efeb0a8eb153016">vfile_t</a> *file)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获得下一个文件 </p>
+
+</div>
+</div>
+<a id="a0a5b896d6e8fa430d0848bcfec76bb19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a5b896d6e8fa430d0848bcfec76bb19">&#9670;&nbsp;</a></span>get_root</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d5/dfa/vfs_8h.html#a1bfebb35eb9e3ee94efeb0a8eb153016">vfile_t</a>*(* fs_operation::get_root) (<a class="el" href="../../d5/dfa/vfs_8h.html#a04869525957df4a1112f42464d5ef9a9">fs_t</a> *fs)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获得根目录 </p>
+
+</div>
+</div>
+<a id="ad921f2b4f6c9b2c871a8eb4f0b07df2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad921f2b4f6c9b2c871a8eb4f0b07df2f">&#9670;&nbsp;</a></span>open_fs</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d5/dfa/vfs_8h.html#a04869525957df4a1112f42464d5ef9a9">fs_t</a>*(* fs_operation::open_fs) (<a class="el" href="../../d1/d2a/structdisk__t.html">disk_t</a> *disk, void *pbr)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>打开文件系统 </p>
+
+</div>
+</div>
+<a id="ab98be4003aa7a0222d732314fa0efdef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab98be4003aa7a0222d732314fa0efdef">&#9670;&nbsp;</a></span>read_file</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void(* fs_operation::read_file) (<a class="el" href="../../d5/dfa/vfs_8h.html#a04869525957df4a1112f42464d5ef9a9">fs_t</a> *fs, <a class="el" href="../../d5/dfa/vfs_8h.html#a1bfebb35eb9e3ee94efeb0a8eb153016">vfile_t</a> *file, void *buffer)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>读文件 </p>
+
+</div>
+</div>
+<a id="ad623083869749abd03f361bff82a7bc1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad623083869749abd03f361bff82a7bc1">&#9670;&nbsp;</a></span>write_file</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void(* fs_operation::write_file) (<a class="el" href="../../d5/dfa/vfs_8h.html#a04869525957df4a1112f42464d5ef9a9">fs_t</a> *fs, <a class="el" href="../../d5/dfa/vfs_8h.html#a1bfebb35eb9e3ee94efeb0a8eb153016">vfile_t</a> *file, void *buffer, size_t <a class="el" href="../../d2/d29/heap_8c.html#a854352f53b148adc24983a58a1866d66">size</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>读文件 </p>
+
+</div>
+</div>
+<hr/>该结构体的文档由以下文件生成:<ul>
+<li>fs/<a class="el" href="../../d5/dfa/vfs_8h_source.html">vfs.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>
